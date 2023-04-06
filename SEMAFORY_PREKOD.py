@@ -44,14 +44,16 @@ for k in komunikat:
         klik = "lit"
         midlist.append(klik)
         midlist.append(k)
+    if k.isdigit() == True and klik == "num": # n zamiast k
+        encode_digit(k)
+        midlist.append(n) #was condition 4 should be 3
+    
     if k.isdigit() == True and klik == "lit": #n zamiast k
         klik = "num"
         midlist.append(klik)
         encode_digit(k)
-        midlist.append(n)
-    if k.isdigit() == True and klik == "num": # n zamiast k
-        encode_digit(k)
-        midlist.append(n)
+        midlist.append(n) #was condition 3 should be 4
+    
 
 print(midlist)
 
